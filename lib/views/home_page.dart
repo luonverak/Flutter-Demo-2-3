@@ -20,21 +20,45 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screen[index],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: index,
-        onDestinationSelected: (value) {
-          setState(() {
-            index = value;
-          });
-        },
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-          NavigationDestination(
-              icon: Icon(Icons.category_outlined), label: 'Category'),
-          NavigationDestination(
-              icon: Icon(Icons.favorite_border_outlined), label: 'Favorite'),
-          NavigationDestination(icon: Icon(Icons.person), label: 'Profile')
-        ],
+      bottomNavigationBar: NavigationBarTheme(
+        data: const NavigationBarThemeData(
+          backgroundColor: Colors.transparent,
+        ),
+        child: NavigationBar(
+          indicatorColor: Colors.transparent,
+          selectedIndex: index,
+          onDestinationSelected: (value) {
+            setState(() {
+              index = value;
+            });
+          },
+          destinations: const [
+            NavigationDestination(
+                icon: Icon(
+                  Icons.home,
+                  size: 35,
+                ),
+                label: 'Home'),
+            NavigationDestination(
+                icon: Icon(
+                  Icons.category_outlined,
+                  size: 35,
+                ),
+                label: 'Category'),
+            NavigationDestination(
+                icon: Icon(
+                  Icons.favorite_border_outlined,
+                  size: 35,
+                ),
+                label: 'Favorite'),
+            NavigationDestination(
+                icon: Icon(
+                  Icons.person,
+                  size: 35,
+                ),
+                label: 'Profile')
+          ],
+        ),
       ),
     );
   }

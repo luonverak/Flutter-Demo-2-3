@@ -26,4 +26,9 @@ List<Category> listCategory = [
     name: 'Phone',
     thumbnail: 'asset/images/iphone.webp',
   ),
+  Category(
+    id: 4,
+    name: 'Laptop',
+    thumbnail: 'asset/images/m1-pro.jpeg',
+  ),
 ];
