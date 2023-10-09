@@ -113,28 +113,79 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Container(
                         width: 360 / 2,
-                        height: 170,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 31, 31, 31),
                           borderRadius: BorderRadius.circular(40),
                         ),
                         child: Column(
                           children: [
-                            Padding(
-                              padding: const EdgeInsets.all(13),
+                            const Padding(
+                              padding: EdgeInsets.only(
+                                top: 22,
+                                left: 8,
+                                right: 8,
+                              ),
                               child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
                                   Text(
-                                    'data',
+                                    'Cloud X 3 AD',
                                     style: TextStyle(
                                       color: Colors.white,
-                                      fontSize: 18,
+                                      fontSize: 19,
                                       fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.favorite_border,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'The ultra-agile shoe for mixed-sport workouts and all-day wear. With a breathable upper and impact-absorbing cushioning.',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                ),
+                                maxLines: 3,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  const Text(
+                                    '\$159.0',
+                                    style: TextStyle(
+                                      color: Color.fromARGB(255, 229, 255, 0),
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: const Color.fromARGB(
+                                          255, 229, 255, 0),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                    child: const Padding(
+                                      padding: EdgeInsets.all(5),
+                                      child: Icon(
+                                        Icons.add,
+                                      ),
                                     ),
                                   )
                                 ],
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
