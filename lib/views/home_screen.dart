@@ -100,21 +100,69 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 80,
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    width: 360 / 2,
-                    height: 300,
-                    color: Colors.amber,
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        width: 360 / 2,
+                        height: 170,
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 31, 31, 31),
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(13),
+                              child: Row(
+                                children: [
+                                  Text(
+                                    'data',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                      Positioned(
+                        top: -85,
+                        child: Container(
+                          width: 360 / 2,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            // color: const Color.fromARGB(98, 33, 149, 243),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.white.withOpacity(0.8),
+                                spreadRadius: 1,
+                                blurRadius: 15,
+                                offset: const Offset(
+                                    20, -8), // changes position of shadow
+                              ),
+                            ],
+                          ),
+                          child: Image.asset(
+                            'asset/images/shoe1.webp',
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                  Container(
-                    width: 360 / 2,
-                    height: 250,
-                    color: Colors.amber,
-                  )
                 ],
               ),
             )
